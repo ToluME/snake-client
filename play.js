@@ -1,18 +1,2 @@
-const net = require("net");
-const connect = function() {
-  const conn = net.createConnection({
-    host: "localhost", // IP address
-    port: 50541// PORT number
-  });
-  conn.on("data", (data) => {
-    console.log("Server says: ", data);
-  });
+const connect = require("./client.js");
 
-  // interpret incoming data as text
-  conn.setEncoding("utf8");
-
-  return conn;
-};
-
-console.log("Connecting ...");
-connect();
