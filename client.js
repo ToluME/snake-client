@@ -5,6 +5,10 @@ const connect = function() {
     host: "localhost", // IP address
     port: 50541// PORT number
   });
+  conn.on("connect", () => {
+    console.log("Successfully connected to game server");
+    conn.write("Name: TME");
+  });
   conn.on("data", (data) => {
     console.log("Server says: ", data);
   });
