@@ -22,6 +22,10 @@ const setupInput = function(conn) {
         connection.write("Move: down");
       } else if (key === 'd') {
         connection.write("Move: right");
+      } else if (key === 'h') {
+        connection.write("Say: Hi!");
+      } else if (key === 'r') {
+        connection.write("Say: Run");
       }
     });
   };
